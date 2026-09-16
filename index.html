@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mr code tech — creator of Mr Code Tech. Tutorials, projects, and coding content on YouTube.">
+    <title>Mr Code Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Primary">
+            <a href="#home" class="logo">
+                MR CODE TECH
+                <span>by Mr code tech</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#channel">Channel</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> YouTube creator · Web developer</p>
+            <h1>Hi, I’m Mr code tech.<br>I build and teach on <em>Mr Code Tech</em>.</h1>
+            <p class="hero-copy">
+                Practical coding videos — AI and python videos —
+                so you can learn and grow your skills, not just watch another tutorial.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="https://www.youtube.com/@dude_dubai_code/featured" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                <a class="btn btn-ghost" href="#videos">Browse videos</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-head">
+                <p class="eyebrow">About</p>
+                <h2>Code, AI, and python, and clear explanations</h2>
+            </div>
+            <div class="about-grid">
+                <p>
+                    I’m Mr code tech,
+                    This site is my home base: who I am, what I teach, and where to find the channel.
+                </p>
+                <p>
+                    I focus on beginner-friendly AI and python with enough depth that you can
+                    actually use it — AI and python you can follow, and projects
+                    you can remix.
+                </p>
+                <ul class="skill-list">
+                    <li>AI &amp; python</li>
+                    <li>AI &amp; python</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="channel" class="section channel-section">
+            <div class="section-head">
+                <p class="eyebrow">The channel</p>
+                <h2>Mr Code Tech on YouTube</h2>
+            </div>
+            <div class="channel-card">
+                <div>
+                    <h3>Learn by building</h3>
+                    <p>
+                        Short, focused videos on AI and python. Subscribe for new uploads,
+                        then come back here for the full list of featured episodes.
+                    </p>
+                    <a class="btn btn-primary" href="https://www.youtube.com/@dude_dubai_code/featured" target="_blank" rel="noopener noreferrer">Subscribe</a>
+                </div>
+                <dl class="stats">
+                    <div>
+                        <dt>Focus</dt>
+                        <dd>AI &amp; python</dd>
+                    </div>
+                    <div>
+                        <dt>Style</dt>
+                        <dd>Projects</dd>
+                    </div>
+                    <div>
+                        <dt>Level</dt>
+                        <dd>Beginner</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section id="videos" class="section">
+            <div class="section-head">
+                <p class="eyebrow">Featured</p>
+                <h2>Latest from the channel AI and python</h2>
+            </div>
+            <div id="video-grid" class="video-grid"></div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-head">
+                <p class="eyebrow">Projects</p>
+                <h2>Things I’m building</h2>
+            </div>
+            <div class="project-grid">
+                <article class="card">
+                    <h3>This portfolio</h3>
+                    <p>A single-page site for Mr Code Tech — AI and python working as one.</p>
+                </article>
+                <article class="card">
+                    <h3>Tutorial series</h3>
+                    <p>Step-by-step videos that turn a blank page into a finished, usable AI and python.</p>
+                </article>
+                <article class="card">
+                    <h3>Practice labs</h3>
+                    <p>Small AI and python challenges that match what I cover on the channel.</p>
+                </article>
+            </div>
+        </section>
+
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Mr Code Tech · Mr code tech</p>
+        <a href="https://www.youtube.com/@dude_dubai_code/featured" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
