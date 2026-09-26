@@ -1,11 +1,18 @@
+@font-face {
+    font-family: 'Display';
+    src: url('fonts/Display.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --bg: #07080c;
     --bg-elevated: #10131a;
     --line: rgba(255, 255, 255, 0.08);
     --text: #f4f6fb;
     --muted: #9aa3b5;
-    --accent: #ff3b4a;
-    --accent-2: #5ce1e6;
+    --accent: #7FFF00;
+    --accent-2: #9370DB;
     --radius: 16px;
     --nav-h: 78px;
 }
@@ -22,10 +29,21 @@ html {
 
 body {
     margin: 0;
-    background: var(--bg);
+    background: url('background.png') center/cover no-repeat fixed;
     color: var(--text);
-    font-family: Outfit, sans-serif;
+    font-family: 'Display', Outfit, sans-serif;
     line-height: 1.6;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(7, 8, 12, 0.85), rgba(127, 255, 0, 0.1), rgba(147, 112, 219, 0.1));
+    z-index: -1;
 }
 
 .site-header {
@@ -35,6 +53,16 @@ body {
     background: rgba(7, 8, 12, 0.88);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
+}
+
+.site-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
 }
 
 .main-nav {
@@ -62,7 +90,7 @@ body {
     font-family: "IBM Plex Mono", monospace;
     font-size: 10px;
     letter-spacing: 2px;
-    color: var(--accent-2);
+    color: var(--accent);
     font-weight: 500;
 }
 
@@ -93,7 +121,7 @@ body {
     bottom: -8px;
     width: 0;
     height: 2px;
-    background: var(--accent);
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
     transition: width 0.25s ease;
 }
 
@@ -143,7 +171,7 @@ main {
     align-items: center;
     gap: 10px;
     margin: 0 0 16px;
-    color: var(--accent-2);
+    color: var(--accent);
     font-family: "IBM Plex Mono", monospace;
     font-size: 13px;
 }
@@ -152,8 +180,8 @@ main {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #3dff8a;
-    box-shadow: 0 0 0 4px rgba(61, 255, 138, 0.15);
+    background: #7FFF00;
+    box-shadow: 0 0 0 4px rgba(127, 255, 0, 0.15);
 }
 
 h1,
@@ -161,6 +189,7 @@ h2,
 h3 {
     line-height: 1.15;
     margin: 0 0 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 h1 {
@@ -177,6 +206,7 @@ h1 em {
     max-width: 52ch;
     color: var(--muted);
     font-size: 1.125rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .hero-actions,
@@ -201,7 +231,7 @@ h1 em {
 }
 
 .btn-primary {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
     color: white;
 }
 
@@ -213,7 +243,17 @@ h1 em {
 
 .section {
     padding: 88px 0;
-    border-top: 1px solid var(--line);
+    position: relative;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
 }
 
 .section-head {
@@ -310,7 +350,7 @@ h1 em {
     display: block;
     object-fit: cover;
     background:
-        linear-gradient(135deg, rgba(255, 59, 74, 0.35), rgba(92, 225, 230, 0.18)),
+        linear-gradient(135deg, rgba(127, 255, 0, 0.35), rgba(147, 112, 219, 0.18)),
         #161b24;
 }
 
@@ -371,11 +411,11 @@ h1 em {
 .form-status {
     min-height: 1.4em;
     margin: 0;
-    color: var(--accent-2);
+    color: var(--accent);
 }
 
 .form-status.error {
-    color: var(--accent);
+    color: var(--accent-2);
 }
 
 .site-footer {
@@ -386,7 +426,17 @@ h1 em {
     justify-content: space-between;
     gap: 16px;
     color: var(--muted);
-    border-top: 1px solid var(--line);
+    position: relative;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
 }
 
 .site-footer a {
