@@ -2,35 +2,52 @@ const YOUTUBE_CHANNEL = "https://www.youtube.com/@dude_dubai_code/featured";
 
 const videos = [
     {
-        title: "TUI Calculator in python#python #pythontutorial #code",
-        description: "This video teaches you to build a working TUI python calculator check out my videos",
-        url: "https://www.youtube.com/watch?v=LA6jVJAgqUE&t=31s",
+        title: "5 TOOLS EVERY MODERN SOFTWARE DEVELOPER NEEDS!!!",
+        description: "New here! hello! my name is Ammar, I make quality python vids and if you want some peak educational entertainment you know what to do! js check my vids😏my discord server:   / discord  my portofolio: https://xct-web.github.io/mr-code-tec...",
+        url: "https://www.youtube.com/watch?v=U-ccXtNFoxw&t=2s",
         tag: "01"
     },
     {
-        title: "I asked 2 AI's to make a personal dashboard #ai #githubcopilot #cursor #code",
-        description: "I asked github copilot and cursor to generate a full stack dashboard",
-        url: "https://www.youtube.com/watch?v=zm4PpHOO8fY&t=2s",
+        title: "I made a prototype tech startup with 0 $",
+        description: "New here! hello! my name is Ammar, I make quality python vids and if you want some peak educational entertainment you know what to do! js check my vids😏my discord server:   / discord  my portofolio: https://xct-web.github.io/mr-code-tec...",
+        url: "https://www.youtube.com/watch?v=LtOshQHtRjw&t=41s",
         tag: "02"
     },
     {
-        title: "I asked to AI's to make me a house plan",
-        description: "check my other vids",
-        url: "https://www.youtube.com/watch?v=gr_N647CaOI&t=1s",
+        title: "WHAT IS HAPPENING TO THE TECH MARKET(solution will be given :} )",
+        description: "New here! hello! my name is Ammar, I make quality python vids and if you want some peak educational entertainment you know what to do! js check my vids😏my discord server:   / discord  my portofolio: https://xct-web.github.io/mr-code-tec...",
+        url: "https://www.youtube.com/watch?v=zBkg7hg0HuE&t=8s",
         tag: "03"
     }
 ];
 
+const popularVideos = [
+    {
+        title: "Complete python roadmap",
+        description: "New here! hello! my name is Ammar, I make quality python vids and if you want some peak educational entertainment you know what to do! js check my vids😏my discord server:   / discord  my portofolio: https://xct-web.github.io/mr-code-tec...",
+        url: "https://www.youtube.com/watch?v=Mkcm_6gjdwY&t=48s"
+    },
+    {
+        title: "I made a prototype tech startup with 0 $",
+        description: "New here! hello! my name is Ammar, I make quality python vids and if you want some peak educational entertainment you know what to do! js check my vids😏my discord server:   / discord  my portofolio: https://xct-web.github.io/mr-code-tec...",
+        url: "https://www.youtube.com/watch?v=LtOshQHtRjw&t=43s"
+    },
+    {
+        title: "Build a working TUI Python calculator",
+        description: "This video teaches you to build a working TUI python calculator\ncheck out my videos",
+        url: "https://www.youtube.com/watch?v=LA6jVJAgqUE&t=36s"
+    }
+];
 function getYouTubeThumbnail(url, quality = "maxresdefault") {
     const videoId = new URL(url).searchParams.get("v");
     return videoId ? `https://img.youtube.com/vi/${videoId}/${quality}.jpg` : "";
 }
 
-function renderVideos() {
-    const grid = document.getElementById("video-grid");
+function renderVideoGrid(gridId, videoList) {
+    const grid = document.getElementById(gridId);
     if (!grid) return;
 
-    grid.innerHTML = videos
+    grid.innerHTML = videoList
         .map(
             (video) => `
         <article class="video-card">
@@ -45,6 +62,10 @@ function renderVideos() {
         .join("");
 }
 
+function renderVideos() {
+    renderVideoGrid("video-grid", videos);
+    renderVideoGrid("popular-video-grid", popularVideos);
+}
 function setupNav() {
     const toggle = document.querySelector(".nav-toggle");
     const links = document.getElementById("nav-links");
