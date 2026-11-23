@@ -290,6 +290,7 @@ h1 em {
 .skill-list li,
 .card,
 .channel-card,
+.discord-card,
 .contact-form {
     background: var(--bg-elevated);
     border: 1px solid var(--line);
@@ -327,6 +328,50 @@ h1 em {
     font-weight: 700;
 }
 
+
+.discord-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.discord-icon {
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+    color: #5865f2;
+}
+
+.discord-copy {
+    flex: 1;
+}
+
+.discord-copy .eyebrow {
+    margin-bottom: 8px;
+}
+
+.discord-copy h2 {
+    margin-bottom: 8px;
+}
+
+.discord-copy p:last-child {
+    margin: 0;
+    color: var(--muted);
+}
+
+.btn-discord {
+    flex-shrink: 0;
+    background: #5865f2;
+    color: #fff;
+}
+
+.btn-discord:hover {
+    background: #4752c4;
+}
 .video-grid {
     grid-template-columns: repeat(3, 1fr);
 }
@@ -471,5 +516,10 @@ h1 em {
     .project-grid,
     .stats {
         grid-template-columns: 1fr;
+    }
+
+    .discord-card {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
