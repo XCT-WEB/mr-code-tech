@@ -1,26 +1,5 @@
 const YOUTUBE_CHANNEL = "https://www.youtube.com/@dude_dubai_code/featured";
 
-const videos = [
-    {
-        title: "5 TOOLS EVERY MODERN SOFTWARE DEVELOPER NEEDS!!!",
-        description: "New here! hello! my name is Ammar, I make quality python vids and if you want some peak educational entertainment you know what to do! js check my vids😏my discord server:   / discord  my portofolio: https://xct-web.github.io/mr-code-tec...",
-        url: "https://www.youtube.com/watch?v=U-ccXtNFoxw&t=2s",
-        tag: "01"
-    },
-    {
-        title: "I made a prototype tech startup with 0 $",
-        description: "New here! hello! my name is Ammar, I make quality python vids and if you want some peak educational entertainment you know what to do! js check my vids😏my discord server:   / discord  my portofolio: https://xct-web.github.io/mr-code-tec...",
-        url: "https://www.youtube.com/watch?v=LtOshQHtRjw&t=41s",
-        tag: "02"
-    },
-    {
-        title: "WHAT IS HAPPENING TO THE TECH MARKET(solution will be given :} )",
-        description: "New here! hello! my name is Ammar, I make quality python vids and if you want some peak educational entertainment you know what to do! js check my vids😏my discord server:   / discord  my portofolio: https://xct-web.github.io/mr-code-tec...",
-        url: "https://www.youtube.com/watch?v=zBkg7hg0HuE&t=8s",
-        tag: "03"
-    }
-];
-
 const popularVideos = [
     {
         title: "Complete python roadmap",
@@ -33,9 +12,9 @@ const popularVideos = [
         url: "https://www.youtube.com/watch?v=LtOshQHtRjw&t=43s"
     },
     {
-        title: "Build a working TUI Python calculator",
-        description: "This video teaches you to build a working TUI python calculator\ncheck out my videos",
-        url: "https://www.youtube.com/watch?v=LA6jVJAgqUE&t=36s"
+        title: "5 Tools Every Modern Software Developer Needs",
+        description: "Five essential tools for modern software developers.",
+        url: "https://www.youtube.com/watch?v=U-ccXtNFoxw&t=2s"
     }
 ];
 function getYouTubeThumbnail(url, quality = "maxresdefault") {
@@ -63,7 +42,6 @@ function renderVideoGrid(gridId, videoList) {
 }
 
 function renderVideos() {
-    renderVideoGrid("video-grid", videos);
     renderVideoGrid("popular-video-grid", popularVideos);
 }
 function setupNav() {
@@ -137,3 +115,4 @@ renderVideos();
 setupNav();
 setupActiveSection();
 setupContactForm();
+
